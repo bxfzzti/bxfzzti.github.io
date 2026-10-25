@@ -1,0 +1,40 @@
+import {mkdir,writeFile,copyFile} from 'node:fs/promises';
+import {resolve,join} from 'node:path';
+import {projects} from './projects.mjs';
+export const esc=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
+const origin='https://bxfzzti.github.io/';
+const header=(home='../../')=>`<header class="nav"><a class="brand" href="${home}"><span class="brand-dot">b.</span>bxfzzti<span class="slash">/</span><span class="brand-sub">项目</span></a><nav><a href="${home}#projects">全部项目</a><a href="${home}#about">关于</a><a href="https://github.com/bxfzzti" target="_blank" rel="noreferrer">GitHub ↗</a></nav></header>`;
+const footer=`<footer class="footer"><span>bxfzzti · 个人项目</span><span>让想法落地，让工具有用。</span><a href="https://github.com/bxfzzti">GitHub ↗</a></footer>`;
+function shell(title,description,body,prefix='./'){
+ return `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f5f5f7"><title>${esc(title)}</title><meta name="description" content="${esc(description)}"><link rel="icon" href="${prefix}assets/icon.svg"><link rel="stylesheet" href="${prefix}assets/styles.css"></head><body>${body}<script src="${prefix}assets/app.js" defer></script></body></html>`;
+}
+function visual(p){return `<div class="visual ${p.tone}" aria-label="${esc(p.name)}功能示意"><div class="mock-window"><div class="window-dots"><i></i><i></i><i></i><span>${esc(p.name)}</span></div><div class="mock-content">${p.visual}</div></div></div>`;}
+function card(p,i){return `<article class="project-card ${i<2?'featured':''}" data-kind="${p.kind}"><a class="card-art" href="projects/${p.id}/" aria-label="了解${esc(p.name)}">${visual(p)}</a><div class="card-copy"><div class="card-meta"><span>${esc(p.tag)}</span><span class="status ${p.kind}">${esc(p.status)}</span></div><h3><a href="projects/${p.id}/">${esc(p.name)}</a></h3><p>${esc(p.summary)}</p><div class="card-links"><a href="projects/${p.id}/">了解项目 <span>↗</span></a>${p.kind==='tool'?`<a href="${p.url}">立即使用 ↗</a>`:''}</div></div></article>`;}
+function index(){
+ const body=header('./')+`<main><section class="hero"><p class="eyebrow"><span class="live-dot"></span> 来自真实问题的个人项目</p><h1>把想法，<br>做成<span>用得上的工具。</span></h1><p class="hero-desc">为买房算一笔账，为表达理清思路，<br>也为每天重复的工作，找一个更顺手的做法。</p><div class="hero-actions"><a class="button" href="#projects">看看这些项目 <span>↓</span></a><a class="quiet-link" href="https://github.com/bxfzzti">在 GitHub 继续探索 ↗</a></div><div class="hero-index"><span>生活决策</span><i></i><span>团队协作</span><i></i><span>内容创作</span><i></i><span>Agent 工具</span></div><div class="hero-orbit" aria-hidden="true"><span>⌂</span><span>▤</span><span>✦</span><span>↗</span></div></section>
+ <section class="projects section" id="projects"><div class="section-heading"><div><p class="eyebrow">SELECTED PROJECTS</p><h2>各有用处。<br><span>都从一个问题开始。</span></h2></div><p class="section-aside">能在线使用的，直接打开。<br>需要配置的，先看使用说明。</p></div><div class="filters" role="group" aria-label="筛选项目"><button aria-pressed="true" data-filter="all">全部项目 <b>6</b></button><button aria-pressed="false" data-filter="tool">在线工具</button><button aria-pressed="false" data-filter="skill">Skills 与工作流</button><button aria-pressed="false" data-filter="private">私有项目介绍</button></div><p id="filter-status" class="sr-only" role="status">显示6个项目</p><div class="project-grid">${projects.map(card).join('')}</div></section>
+ <section class="section fork-section"><div class="section-heading small"><div><p class="eyebrow">LEARNING IN THE OPEN</p><h2>也向好的开源项目学习。</h2></div><span class="muted">Fork / 原作者作品</span></div><div class="fork-grid"><article><span class="fork-label">FORK · progressrdx</span><h3>Codex Auto Resume</h3><p>本地长任务续跑工具。公开页面保留上游归属；兼容范围以原项目说明为准。</p><a href="https://github.com/bxfzzti/codex-auto-resume">我的 Fork ↗</a><a href="https://github.com/progressrdx/codex-auto-resume">原项目 ↗</a></article><article><span class="fork-label">FORK · houshanren</span><h3>杭州购房知识</h3><p>源于2017年的购房经验资料，作为历史阅读材料；当期政策需要重新核验。</p><a href="https://github.com/bxfzzti/hangzhou_house_knowledge">我的 Fork ↗</a><a href="https://github.com/houshanren/hangzhou_house_knowledge">原项目 ↗</a></article></div></section>
+ <section id="about" class="section about"><p class="eyebrow">ABOUT THIS COLLECTION</p><h2>工具不用很大，<br>能解决一个问题就好。</h2><p>这里是 bxfzzti 的个人项目集合。记录一些从需求出发、逐步做成的网页工具和 Agent 工作流。每个入口都会说明它能做什么、如何开始，以及目前做到哪一步。</p><a class="quiet-link" href="https://github.com/bxfzzti">查看 GitHub 主页 ↗</a><details class="archives"><summary>历史仓库与空项目</summary><p>以下仓库目前没有可展示的产品内容，保留原链接。</p>${['bxfzzti','yanxuanone.github.io','yanxuanone'].map(r=>`<a href="https://github.com/bxfzzti/${r}">${r} ↗</a>`).join('')}</details></section></main>`+footer;
+ return shell('bxfzzti · 把想法做成用得上的工具','个人项目展示：买房小账本、团队抽签、一页纸简历、内容创作流、搜索路由与私有项目介绍。',body);
+}
+function detail(p,standalone=false){
+ const prefix=standalone?'./':'../../';
+ const home=standalone?origin:'../../';
+ const repo=p.repo?'https://github.com/bxfzzti/'+p.repo:null;
+ const call=p.kind==='tool'?`<a class="button" href="${p.url}">打开工具 <span>↗</span></a>`:p.prompt?'<a class="button" href="#start">开始使用 <span>↓</span></a>':'<a class="button" href="#features">了解这个项目 <span>↓</span></a>';
+ const body=header(home)+`<main class="detail"><section class="detail-hero section"><div class="detail-text"><a class="back" href="${home}#projects">← 全部项目</a><p class="eyebrow">${esc(p.status)} · ${esc(p.tag)}</p><p class="product-name"><span class="product-icon ${p.tone}">${p.symbol}</span>${esc(p.name)}</p><h1>${esc(p.headline).replace('\n','<br>')}</h1><p class="hero-desc">${esc(p.summary)}</p><div class="hero-actions">${call}${repo?`<a class="quiet-link" href="${repo}">GitHub ↗</a>`:''}</div></div>${visual(p)}</section>
+ <section id="features" class="section feature-section"><p class="eyebrow">WHY THIS PROJECT</p><h2>解决具体的问题。</h2><div class="feature-grid">${p.features.map(([h,t],i)=>`<article><span class="step-number">0${i+1}</span><h3>${esc(h)}</h3><p>${esc(t)}</p></article>`).join('')}</div></section>
+ <section id="start" class="section start-section"><div><p class="eyebrow">GET STARTED</p><h2>${p.kind==='private'?'关于展示内容':'从这里开始。'}</h2><ol>${p.steps.map(s=>`<li>${esc(s)}</li>`).join('')}</ol></div><div class="start-card">${p.prompt?`<div class="start-card-header"><span>复制给你的 Agent</span><button class="copy" data-copy="install-prompt">复制说明</button></div><pre id="install-prompt">${esc(p.prompt)}</pre><p class="copy-status" role="status"></p>`:p.kind==='tool'?`<span class="product-icon ${p.tone}">${p.symbol}</span><h3>现在就可以试试。</h3><p>打开后按实际需要填写。本站不会替你上传名单或家庭信息。</p><a class="button" href="${p.url}">打开${esc(p.name)} ↗</a>`:`<span class="product-icon slate">▦</span><h3>只分享思路与功能。</h3><p>源码和真实运行数据保持私有。这是项目介绍，没有公共后台或登录入口。</p>`}</div></section>
+ <section class="section boundary"><div><h3>当前范围</h3><p>${esc(p.boundary)}</p></div><div><h3>数据与隐私</h3><p>${esc(p.privacy)}</p></div></section><section class="section bottom-cta"><h2>再看看别的项目。</h2><a href="${home}#projects" class="button">返回项目集 <span>↗</span></a></section></main>`+footer;
+ return shell(p.name+' · bxfzzti 的个人项目',p.summary,body,prefix);
+}
+const dist=resolve('dist');
+async function assets(dir){await mkdir(join(dir,'assets'),{recursive:true});for(const name of ['styles.css','app.js','icon.svg'])await copyFile(join('assets',name),join(dir,'assets',name));}
+await assets(dist);await writeFile(join(dist,'index.html'),index());await writeFile(join(dist,'.nojekyll'),'');
+for(const p of projects){const dir=join(dist,'projects',p.id);await mkdir(dir,{recursive:true});await writeFile(join(dir,'index.html'),detail(p));}
+if(process.argv.includes('--export-root')){
+ const target=resolve(process.argv[process.argv.indexOf('--export-root')+1]);
+ for(const p of projects.filter(p=>p.kind==='skill')){const dir=join(target,p.repo,'site');await assets(dir);await writeFile(join(dir,'index.html'),detail(p,true));}
+}
+console.log('Built portfolio + 6 project pages.');
+
