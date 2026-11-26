@@ -4,233 +4,233 @@ export const projects = [
     "id": "home-ledger",
     "name": "买房小账本",
     "kind": "tool",
-    "status": "在线工具",
-    "tag": "生活决策",
-    "audience": "准备买房 / 对比首付与月供",
+    "status": "打开即用",
+    "tag": "买房算账",
+    "pain": "首付怎么掏、月供扛不扛得住？",
     "repo": "family-freedom-planner",
     "url": "https://bxfzzti.github.io/family-freedom-planner/",
     "symbol": "⌂",
     "tone": "blue",
-    "headline": "算清房子，\n也算清生活。",
-    "summary": "首付多一点，还是手里多留一点？把月供、买后现金和收入变化放在一起看。",
+    "headline": "首付多掏还是手里留钱？\n算完再决定。",
+    "summary": "输入房价、首付和贷款利率，直接算出每月还多少、买完手里还剩多少现金，帮你对比不同方案的真实压力。",
     "features": [
       [
-        "房贷算清楚",
-        "商业贷、公积金和组合贷，支持等额本息与等额本金。"
+        "房贷一笔算清",
+        "支持商贷、公积金和组合贷，等额本息与等额本金直接对比。"
       ],
       [
-        "首付一起比较",
-        "并列查看不同首付对应的月供、全期利息和剩余现金。"
+        "不同首付同屏比",
+        "一眼看清多付首付省了多少利息、手里又少留了多少备用金。"
       ],
       [
-        "为变化留余地",
-        "用三种收入情景查看未来36个月的现金变化。"
+        "提前算好抗风险能力",
+        "模拟未来 36 个月收入变化，看看万一降薪现金流撑不撑得住。"
       ]
     ],
     "steps": [
-      "打开计算器，把虚构示例替换成自己的数据。",
-      "填写实际贷款条件和买后其他支出。",
-      "比较首付与现金变化，下载测算摘要。"
+      "点右侧按钮直接打开网页，把里面的示例数字换成你的真实情况。",
+      "填好贷款方式、利率以及装修/税费等额外开支。",
+      "对比几组首付方案，觉得合适可以直接导出测算结果留底。"
     ],
-    "boundary": "网页按输入条件计算，不自动决定是否买房。银行审批、利率和当地规则需要另行确认。",
-    "privacy": "家庭金额仅在当前浏览器计算，不上传、不自动保存。",
-    "visual": "<div class='mini-label'>首月还款 · 虚构示例</div><strong class='mini-number'>8,327<small>元</small></strong><div class='mini-stats'><span>首付 <b>100 万</b></span><span>买后现金 <b>24 万</b></span></div><div class='bars'><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>"
+    "boundary": "结果按你输入的条件测算，仅供家庭决策参考；具体利率、税费和贷款额度请以银行与当地政策为准。",
+    "privacy": "所有金额仅在你当前浏览器本地计算，不会上传服务器，也不会自动保存。",
+    "visual": "<div class='mini-label'>首月还款 · 示例</div><strong class='mini-number'>8,327<small>元</small></strong><div class='mini-stats'><span>首付 <b>100 万</b></span><span>买后现金 <b>24 万</b></span></div><div class='bars'><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>"
   },
   {
     "id": "team-lottery",
     "name": "团队抽签",
     "kind": "tool",
-    "status": "在线工具",
-    "tag": "团队协作",
-    "audience": "开会抽发言 / 任务分配 / 分组",
+    "status": "打开即用",
+    "tag": "开会抽签",
+    "pain": "开会谁先讲、任务怎么分？直接抽。",
     "repo": "team-lottery-web",
     "url": "https://bxfzzti.github.io/team-lottery-web/",
     "symbol": "✦",
     "tone": "green",
-    "headline": "下一位，\n交给随机。",
-    "summary": "会议发言、任务分配、小组汇报。录入名单，一次抽人、抽组，或排出完整顺序。",
+    "headline": "开会发言、分组抽人，\n3 秒公平搞定。",
+    "summary": "把名单直接粘贴进去，一键随机抽人、抽小组或排出完整发言顺序。支持现场投屏，抽过的自动跳过不重复。",
     "features": [
       [
-        "五种抽取方式",
-        "全员、指定组、抽小组、先组后人，以及完整排序。"
+        "常见抽法全都有",
+        "全员抽、指定小组抽、先抽组再抽人，或者一键排出完整顺序。"
       ],
       [
-        "同一轮不重复",
-        "保留本轮记录，可暂停缺席成员，也可开启允许重复。"
+        "同一轮绝不重复",
+        "自动记录已经抽过的人，有人请假可以临时跳过，也能随时重置。"
       ],
       [
-        "为现场准备",
-        "粘贴两列表格导入名单，下载CSV备份，切换投屏显示。"
+        "直接从表格粘名单",
+        "支持从 Excel/飞书复制两列名单直接导入，支持投屏大字展示。"
       ]
     ],
     "steps": [
-      "录入小组和成员，或粘贴表格中的两列名单。",
-      "选择抽取方式、人数和是否允许重复。",
-      "开始抽签，按需展示结果、复制或生成完整顺序。"
+      "点右侧按钮打开网页，手动输入或直接从表格粘贴人员名单。",
+      "选好抽取方式（抽人/抽组/排顺序）和每次抽取人数。",
+      "点击开始抽签，结果可直接投屏展示或一键复制发群里。"
     ],
-    "boundary": "使用浏览器Web Crypto随机源。不同模式的抽样单位不同：先抽组再抽人时，各有效小组机会相同。",
-    "privacy": "名单和本轮状态保存在当前浏览器localStorage，不上传服务器。清除站点数据会清空记录。",
-    "visual": "<div class='mini-label'>让每个人都有机会</div><div class='lottery-orbs'><b>01</b><b>02</b><b>03</b></div><div class='mini-action'>下一位，会是谁？ <span>↗</span></div>"
+    "boundary": "基于浏览器标准加密随机源抽取，保证公平随机。",
+    "privacy": "名单和抽签记录只存在你当前浏览器的本地存储中，不上传服务器。",
+    "visual": "<div class='mini-label'>公平随机 · 支持投屏</div><div class='lottery-orbs'><b>01</b><b>02</b><b>03</b></div><div class='mini-action'>下一位发言的是？ <span>↗</span></div>"
   },
   {
     "id": "home-network",
     "name": "家庭网络排障",
     "kind": "skill",
-    "status": "Agent Skill",
-    "tag": "网络排障",
-    "audience": "千兆宽带慢 / Mesh粘连 / NAS与远程卡",
+    "status": "发给 AI 用",
+    "tag": "查网速慢",
+    "pain": "千兆宽带跑不满、NAS 和远程桌面卡？",
     "repo": "home-network-troubleshooter-skill",
     "url": "https://github.com/bxfzzti/home-network-troubleshooter-skill",
     "symbol": "◈",
     "tone": "teal",
-    "headline": "千兆宽带跑不满？\n按步骤查出真病根。",
-    "summary": "系统排查家庭千兆宽带慢、Mesh 跨房粘连、NAS 传输卡顿与局域网远程掉帧。先定位再调优，不盲目折腾。",
+    "headline": "家里网速慢、总掉帧？\n让 AI 按步骤揪出真病根。",
+    "summary": "复制给 AI，它会先查有没有设备在偷跑带宽、有没有买错百兆网线、路由器有没有穿墙粘连，再一步步帮你调快。",
     "features": [
       [
-        "先查全局再动手",
-        "先看主路由峰值、实时抢带宽设备和跨房粘连，避免盲目调参走弯路。"
+        "不再盲目瞎重启",
+        "先查主路由总流量、设备粘连和网线规格，几分钟锁定真正卡在哪一段。"
       ],
       [
-        "分段测延迟定界",
-        "用一键脚本逐段测量本机、子路由、主路由与公网延迟，一眼锁死卡顿段。"
+        "自带一键测延迟脚本",
+        "分段测出本机、子路由、主路由和公网延迟，一眼看穿是宽带问题还是 Wi-Fi 问题。"
       ],
       [
-        "避开常见软硬件坑",
-        "覆盖4芯百兆线、双频Mesh粘连改无线中继、80MHz vs 160MHz 与代理分流。"
+        "避开常见花冤枉钱的坑",
+        "避开 4 芯百兆线、盲目开 160MHz 掉速、买错单只三频路由等常见大坑。"
       ]
     ],
     "steps": [
-      "复制右侧提示词，发给支持 Skill 的 AI 助手（如 Antigravity / Claude Code / Codex）。",
-      "按 AI 引导检查主路由状态、本机网口协商和分段 Ping 延迟。",
-      "每次只改一个变量并复测对比，变差立即回退，稳步把网速和抖动调到最佳。"
+      "点右侧「复制这段话」，直接粘贴发给你的 AI 助手（如 Antigravity / Claude / Codex）。",
+      "告诉 AI 你遇到的现象（比如“千兆宽带只有100M”或“NAS传文件很卡”），跟着它排查。",
+      "每改一个设置就复测一次，变快保留、变慢回退，安全不踩断网坑。"
     ],
     "prompt": "请安装或读取 https://github.com/bxfzzti/home-network-troubleshooter-skill 的家庭网络排障 Skill（入口为 skills/home-network-troubleshooter/SKILL.md）。请严格按照其中的 5 步排障漏斗，先帮我检查主路由全局状态、本机物理层协商和分段 Ping 延迟，定位出真正的卡顿瓶颈后再给优化建议；不要盲目切换光猫拨号模式导致断网。",
-    "boundary": "本页提供 Skill 说明与一键提示词，不会远程访问你的路由器或电脑。涉及光猫桥接/PPPoE 切换或解除 Mesh 子节点时，请遵循安全提示避免中途断网。",
-    "privacy": "所有诊断命令均在你自己的电脑与局域网内运行；公开仓库已完全脱敏，不含任何真实账号、密码或 IP。",
-    "visual": "<div class='net-hops'><div><span>Mac → 子路由</span><b>0.5 ms</b></div><div><span>子路由 → 主路由</span><b>4.4 ms</b></div><div class='ok'><span>外网测速 · 抖动 2ms</span><b>488 Mbps</b></div></div><p class='mini-label'>分段定界，不盲猜。</p>"
+    "boundary": "本页只提供发给 AI 的操作指令，不会远程动你的电脑或路由器。修改光猫拨号或重置子路由前，AI 会先提醒你避免断网。",
+    "privacy": "所有检测命令都在你自己的电脑和局域网内执行，不上传任何账号密码或隐私信息。",
+    "visual": "<div class='net-hops'><div><span>电脑 → 书房路由</span><b>0.5 ms</b></div><div><span>书房 → 客厅主路由</span><b>4.4 ms</b></div><div class='ok'><span>优化后测速 · 抖动 2ms</span><b>488 Mbps</b></div></div><p class='mini-label'>先定位卡顿段，再对症优化</p>"
   },
   {
     "id": "resume",
     "name": "一页纸简历",
     "kind": "skill",
-    "status": "Agent Skill",
-    "tag": "求职表达",
-    "audience": "5年以上求职者 / 简历诊断与JD定制",
+    "status": "发给 AI 用",
+    "tag": "改简历",
+    "pain": "工作 5 年以上，简历又长又没重点？",
     "repo": "one-page-resume-editor-skill",
     "url": "https://bxfzzti.github.io/one-page-resume-editor-skill/",
     "symbol": "▤",
     "tone": "sand",
-    "headline": "把重要的经历，\n写到一页里。",
-    "summary": "面向5年以上中高阶求职者。梳理定位、整理经历、按JD定制，让事实和个人贡献更清楚。",
+    "headline": "把你的核心经历，\n漂亮地装进一页里。",
+    "summary": "复制给 AI，它会先帮你找出简历最致命的 3 个硬伤，再照着目标岗位要求精简改写，只放大你的真实贡献、绝不瞎编。",
     "features": [
       [
-        "先诊断再改写",
-        "找出定位、结构、时间线和证据中最值得修改的问题。"
+        "先挑毛病，再动笔改",
+        "不直接套模板重写，而是先指出你简历里定位模糊、重点不突出的 3 个关键问题。"
       ],
       [
-        "围绕岗位组织",
-        "同一份事实底稿可分别适配多个JD，明确真实缺口。"
+        "照着岗位 JD 精准定制",
+        "投不同岗位时，用同一份真实经历自动调整侧重点，并提醒你和岗位的真实差距。"
       ],
       [
-        "保留事实边界",
-        "不改数字、公司和岗位，不把协作写成主导。"
+        "严守真实底线",
+        "绝不篡改你的数据、公司名和职级，不把团队协作吹成个人主导，面试不怕被问穿。"
       ]
     ],
     "steps": [
-      "把右侧提示词发给支持 Skill 的 AI 助手，加载根目录 SKILL.md。",
-      "提供自己的简历，选择诊断、整理、JD定制或面试检查。",
-      "确认内容后，再明确要求生成Word/PDF。"
+      "点右侧「复制这段话」，发给你的 AI 助手。",
+      "把你现有的简历和想投的岗位介绍（JD）发给 AI，先看它的诊断报告。",
+      "确认修改方向没问题后，再让 AI 帮你精简改写并导出 Word 或 PDF。"
     ],
     "prompt": "请安装或加载 https://github.com/bxfzzti/one-page-resume-editor-skill 的一页纸简历 Skill，入口是根目录 SKILL.md。先说明是否持久安装。请先诊断我的简历，列出最重要的三个问题和待补信息，暂时不要重写；不要编造经历、数字或个人贡献。",
-    "boundary": "本页提供Skill介绍和安装入口，不接收简历、不在线调用模型。仓库web/为开发原型，包含积分和测试支付等历史设计，未在此部署。缺少JD时不能完成岗位匹配；一页会损害内容时应保留两页。",
-    "privacy": "简历在你选择的Agent环境中处理；上传前请自行决定是否去除姓名、联系方式和敏感业务信息。",
-    "visual": "<div class='resume-paper'><b>你的经历</b><span>定位清楚 · 贡献具体</span><hr><h4>工作经历</h4><p class='skeleton'></p><p class='skeleton short'></p><h4>事实与成果</h4><p class='skeleton'></p><p class='skeleton short'></p></div>"
+    "boundary": "本页不接收你的简历文件；如果经历极多硬塞一页会丢失核心优势，AI 会建议保留两页。",
+    "privacy": "你的简历只会在你自己选择的 AI 工具里处理；发送前可以自行隐藏姓名、手机号等敏感信息。",
+    "visual": "<div class='resume-paper'><b>一页搞定核心经历</b><span>重点突出 · 拒绝瞎编</span><hr><h4>核心工作成果</h4><p class='skeleton'></p><p class='skeleton short'></p><h4>岗位匹配亮点</h4><p class='skeleton'></p><p class='skeleton short'></p></div>"
   },
   {
     "id": "content",
     "name": "内容创作流",
     "kind": "skill",
-    "status": "Agent 工作流",
-    "tag": "内容创作",
-    "audience": "自媒体 / 公众号与经验长文选题写作",
+    "status": "发给 AI 用",
+    "tag": "写文章找选题",
+    "pain": "每天不知道写什么？写完又像水文？",
     "repo": "content-pipeline",
     "url": "https://bxfzzti.github.io/content-pipeline/",
     "symbol": "↗",
     "tone": "peach",
-    "headline": "从今天写什么，\n到一篇有依据的内容。",
-    "summary": "把素材、选题、角度、写作和质检连起来。每一步都有输入、产物和确认点。",
+    "headline": "从不知道写什么，\n到发出一篇有干货的文章。",
+    "summary": "复制给 AI，帮你把找素材、挑选题、定角度、写正文和最后质检串成一条线，每一步都先给你把关，不再写出空洞 AI 味。",
     "features": [
       [
-        "先找到值得写的题",
-        "热点与产品体验分开整理，保留来源与数据状态。"
+        "先帮你挑出值得写的题",
+        "把热点和真实体验分开整理，每个候选题都带原文来源，不凭空编造。"
       ],
       [
-        "把判断放在写作前",
-        "代码预筛和模型判断分工，在选题、角度、定调处确认。"
+        "动笔前先对齐角度和风格",
+        "先跟你确认写什么、怎么切入、用什么语气，满意了再写正文，避免整篇返工。"
       ],
       [
-        "写完也能回看",
-        "质检、内容适配、飞书沉淀与可选知识库组成后续链路。"
+        "写完自动做质量体检",
+        "检查有没有事实漏洞和空话套话，还可以按不同平台习惯改写成对应版本。"
       ]
     ],
     "steps": [
-      "复制右侧提示词发给 AI，读取 article-pipeline/SKILL.md 总入口。",
-      "告诉 AI 本次方向，先看候选题及原文来源。",
-      "确认选题、角度和定调后，再推进正文与发布。"
+      "点右侧「复制这段话」，发给你的 AI 助手。",
+      "告诉 AI 你今天想写的领域或素材，先让它列出几个候选题和出处。",
+      "挑中满意的选题和角度后，再让 AI 推进正文写作与检查。"
     ],
     "prompt": "请读取 https://github.com/bxfzzti/content-pipeline 的 article-pipeline/SKILL.md 及当前阶段引用。先检查可用的数据源和依赖；帮我整理今天值得写的选题，保留来源、数据时间和不可用项，等待我确认，不要直接写稿或发布。",
-    "boundary": "这是需Agent与数据源配合的工作流，不是打开网页就能自动出稿的服务。来源可能实时不可用；缓存必须标注。飞书发布和本地知识库需单独配置。",
-    "privacy": "公开介绍页不连接任何个人账号。实际流程禁止借用个人小红书登录态，发布前保留确认。",
-    "visual": "<div class='flow-board'><div>素材 <span>→</span> 选题</div><div>角度 <span>→</span> 定调</div><div>写作 <span>→</span> 质检</div></div><p class='mini-label'>先判断，再动笔。</p>"
+    "boundary": "需要配合你的 AI 助手和可用数据源运行，不是点开网页就能全自动发文的工具。",
+    "privacy": "公开页面不连接任何个人社交账号，所有发布动作都由你自己最终确认。",
+    "visual": "<div class='flow-board'><div>找素材 <span>→</span> 挑选题</div><div>定角度 <span>→</span> 写正文</div><div>查漏洞 <span>→</span> 改平台版</div></div><p class='mini-label'>先对齐方向，再动笔写</p>"
   },
   {
     "id": "search",
     "name": "搜索路由",
     "kind": "skill",
-    "status": "环境配置型 Skill",
-    "tag": "Agent 工具",
-    "audience": "想让 AI 选对搜索与网页抓取工具的人",
+    "status": "发给 AI 用",
+    "tag": "让AI查资料更准",
+    "pain": "AI 查资料老是瞎搜、网页打不开？",
     "repo": "web-search-router",
     "url": "https://bxfzzti.github.io/web-search-router/",
     "symbol": "⌕",
     "tone": "lilac",
-    "headline": "找到合适的工具，\n再去找答案。",
-    "summary": "为Agent整理搜索与网页读取的工具选择规则。根据任务、站点和已有工具决定下一步。",
+    "headline": "教 AI 选对搜索工具，\n查资料更快更准。",
+    "summary": "复制给 AI，帮它理清什么时候该用搜索引擎、什么时候该直接读网页正文、什么时候该用浏览器，减少瞎编和读取失败。",
     "features": [
       [
-        "区分搜索与阅读",
-        "先判断是在找信息，还是已经有一个要读取的URL。"
+        "分清「搜信息」和「读网页」",
+        "有明确网址直接抓正文，没网址先精准搜索，不绕弯路。"
       ],
       [
-        "按来源选工具",
-        "通用搜索、平台工具、正文提取与浏览器分工。"
+        "按网站类型自动挑工具",
+        "普通网页、特定平台和动态页面分别交给最合适的工具去读。"
       ],
       [
-        "把环境说清楚",
-        "检查工具是否存在、端点是否可用，失败时明确说明。"
+        "读不到就直说，绝不瞎编",
+        "先检查你电脑里装了哪些工具，遇到需要登录或失败时如实告诉你。"
       ]
     ],
     "steps": [
-      "完整读取根目录SKILL.md，先检查其中的环境假设。",
-      "将浏览器端点、工具名称和可用性调整为自己的环境。",
-      "用一个公开网页验证路由；需要权限或验证时由用户处理。"
+      "点右侧「复制这段话」，发给你的 AI 助手。",
+      "让 AI 先扫描你当前环境里有哪些搜索和网页读取工具，列出需要微调的地方。",
+      "找一个公开网页试跑一次，确认能正常读取就配置完成了。"
     ],
     "prompt": "请阅读 https://github.com/bxfzzti/web-search-router 的 SKILL.md，先检查它假设的工具与浏览器端点在我环境中是否存在，列出缺项和需要调整的配置。不要直接执行文档中的安装命令，不绕过访问权限或验证码，不把读取失败说成已读取。",
-    "boundary": "原始规则包含特定本地端口、工具和历史站点行为，必须按环境核验。它不保证读取所有网页，也不提供绕过访问控制的能力。本介绍页不代用户发起搜索或抓取。",
-    "privacy": "只展示工具路由思路；真实调用遵守所用工具的权限与数据规则。",
-    "visual": "<div class='search-pill'>⌕ <span>搜索，还是读取网页？</span></div><div class='route-lines'><span>搜索引擎</span><span>正文提取</span><span>平台工具</span></div><p class='mini-label'>把每一步交给合适的工具。</p>"
+    "boundary": "不同电脑装的工具不同，AI 会先核验你的本地环境；不会绕过网站登录限制或验证码。",
+    "privacy": "只是一套教 AI 选工具的规则文档，不代发请求，也不收集数据。",
+    "visual": "<div class='search-pill'>⌕ <span>查资料，该用哪个工具？</span></div><div class='route-lines'><span>搜索引擎</span><span>正文提取</span><span>浏览器读取</span></div><p class='mini-label'>用对工具，减少 AI 瞎编</p>"
   },
   {
     "id": "content-desk",
     "name": "内容驾驶舱",
     "kind": "private",
-    "status": "私有项目 · 介绍",
-    "tag": "内容工作台",
-    "audience": "仅展示工作台结构与思路",
+    "status": "仅思路展示",
+    "tag": "私有工作台",
+    "pain": "内部自用内容看板（不对外开放）",
     "symbol": "▦",
     "tone": "slate",
     "headline": "让内容进度，\n一眼看得见。",
-    "summary": "本地内容工作台，把候选题、内容线和流程进度放在同一个界面中。",
+    "summary": "自用的本地内容管理看板，把候选题、内容方向和写作进度集中在一个界面里查看。",
     "features": [
       [
         "集中查看候选",
