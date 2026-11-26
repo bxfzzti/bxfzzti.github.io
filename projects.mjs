@@ -6,6 +6,7 @@ export const projects = [
     "kind": "tool",
     "status": "在线工具",
     "tag": "生活决策",
+    "audience": "准备买房 / 对比首付与月供",
     "repo": "family-freedom-planner",
     "url": "https://bxfzzti.github.io/family-freedom-planner/",
     "symbol": "⌂",
@@ -41,6 +42,7 @@ export const projects = [
     "kind": "tool",
     "status": "在线工具",
     "tag": "团队协作",
+    "audience": "开会抽发言 / 任务分配 / 分组",
     "repo": "team-lottery-web",
     "url": "https://bxfzzti.github.io/team-lottery-web/",
     "symbol": "✦",
@@ -71,11 +73,49 @@ export const projects = [
     "visual": "<div class='mini-label'>让每个人都有机会</div><div class='lottery-orbs'><b>01</b><b>02</b><b>03</b></div><div class='mini-action'>下一位，会是谁？ <span>↗</span></div>"
   },
   {
+    "id": "home-network",
+    "name": "家庭网络排障",
+    "kind": "skill",
+    "status": "Agent Skill",
+    "tag": "网络排障",
+    "audience": "千兆宽带慢 / Mesh粘连 / NAS与远程卡",
+    "repo": "home-network-troubleshooter-skill",
+    "url": "https://github.com/bxfzzti/home-network-troubleshooter-skill",
+    "symbol": "◈",
+    "tone": "teal",
+    "headline": "千兆宽带跑不满？\n按步骤查出真病根。",
+    "summary": "系统排查家庭千兆宽带慢、Mesh 跨房粘连、NAS 传输卡顿与局域网远程掉帧。先定位再调优，不盲目折腾。",
+    "features": [
+      [
+        "先查全局再动手",
+        "先看主路由峰值、实时抢带宽设备和跨房粘连，避免盲目调参走弯路。"
+      ],
+      [
+        "分段测延迟定界",
+        "用一键脚本逐段测量本机、子路由、主路由与公网延迟，一眼锁死卡顿段。"
+      ],
+      [
+        "避开常见软硬件坑",
+        "覆盖4芯百兆线、双频Mesh粘连改无线中继、80MHz vs 160MHz 与代理分流。"
+      ]
+    ],
+    "steps": [
+      "复制右侧提示词，发给支持 Skill 的 AI 助手（如 Antigravity / Claude Code / Codex）。",
+      "按 AI 引导检查主路由状态、本机网口协商和分段 Ping 延迟。",
+      "每次只改一个变量并复测对比，变差立即回退，稳步把网速和抖动调到最佳。"
+    ],
+    "prompt": "请安装或读取 https://github.com/bxfzzti/home-network-troubleshooter-skill 的家庭网络排障 Skill（入口为 skills/home-network-troubleshooter/SKILL.md）。请严格按照其中的 5 步排障漏斗，先帮我检查主路由全局状态、本机物理层协商和分段 Ping 延迟，定位出真正的卡顿瓶颈后再给优化建议；不要盲目切换光猫拨号模式导致断网。",
+    "boundary": "本页提供 Skill 说明与一键提示词，不会远程访问你的路由器或电脑。涉及光猫桥接/PPPoE 切换或解除 Mesh 子节点时，请遵循安全提示避免中途断网。",
+    "privacy": "所有诊断命令均在你自己的电脑与局域网内运行；公开仓库已完全脱敏，不含任何真实账号、密码或 IP。",
+    "visual": "<div class='net-hops'><div><span>Mac → 子路由</span><b>0.5 ms</b></div><div><span>子路由 → 主路由</span><b>4.4 ms</b></div><div class='ok'><span>外网测速 · 抖动 2ms</span><b>488 Mbps</b></div></div><p class='mini-label'>分段定界，不盲猜。</p>"
+  },
+  {
     "id": "resume",
     "name": "一页纸简历",
     "kind": "skill",
     "status": "Agent Skill",
     "tag": "求职表达",
+    "audience": "5年以上求职者 / 简历诊断与JD定制",
     "repo": "one-page-resume-editor-skill",
     "url": "https://bxfzzti.github.io/one-page-resume-editor-skill/",
     "symbol": "▤",
@@ -97,7 +137,7 @@ export const projects = [
       ]
     ],
     "steps": [
-      "把安装说明交给支持Skill的Agent，读取根目录SKILL.md。",
+      "把右侧提示词发给支持 Skill 的 AI 助手，加载根目录 SKILL.md。",
       "提供自己的简历，选择诊断、整理、JD定制或面试检查。",
       "确认内容后，再明确要求生成Word/PDF。"
     ],
@@ -112,6 +152,7 @@ export const projects = [
     "kind": "skill",
     "status": "Agent 工作流",
     "tag": "内容创作",
+    "audience": "自媒体 / 公众号与经验长文选题写作",
     "repo": "content-pipeline",
     "url": "https://bxfzzti.github.io/content-pipeline/",
     "symbol": "↗",
@@ -133,8 +174,8 @@ export const projects = [
       ]
     ],
     "steps": [
-      "读取article-pipeline/SKILL.md总入口，检查需要的数据源与工具。",
-      "告诉Agent本次方向，先看候选题及原文来源。",
+      "复制右侧提示词发给 AI，读取 article-pipeline/SKILL.md 总入口。",
+      "告诉 AI 本次方向，先看候选题及原文来源。",
       "确认选题、角度和定调后，再推进正文与发布。"
     ],
     "prompt": "请读取 https://github.com/bxfzzti/content-pipeline 的 article-pipeline/SKILL.md 及当前阶段引用。先检查可用的数据源和依赖；帮我整理今天值得写的选题，保留来源、数据时间和不可用项，等待我确认，不要直接写稿或发布。",
@@ -148,6 +189,7 @@ export const projects = [
     "kind": "skill",
     "status": "环境配置型 Skill",
     "tag": "Agent 工具",
+    "audience": "想让 AI 选对搜索与网页抓取工具的人",
     "repo": "web-search-router",
     "url": "https://bxfzzti.github.io/web-search-router/",
     "symbol": "⌕",
@@ -184,6 +226,7 @@ export const projects = [
     "kind": "private",
     "status": "私有项目 · 介绍",
     "tag": "内容工作台",
+    "audience": "仅展示工作台结构与思路",
     "symbol": "▦",
     "tone": "slate",
     "headline": "让内容进度，\n一眼看得见。",
